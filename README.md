@@ -16,7 +16,7 @@ The hyperparameters were found manually by trial-and-error. An alternative would
 
 Let me first give a link to the results when all three terms are kept:
 
-https://youtu.be/pUieVD6GD0A
+[![PID](https://img.youtube.com/vi/pUieVD6GD0A/0.jpg)](https://youtu.be/pUieVD6GD0A)
 
 Each term in the PID controller is supposed to handle a different problem.
 
@@ -24,16 +24,17 @@ Each term in the PID controller is supposed to handle a different problem.
 
 The derivative term is supposed to handle the problem of the car **overshooting** and as a consequence of becoming unstable and wiggly. The following video shows that, indeed, without the D-term the car does not behave well:
 
-https://youtu.be/x9reZuW76l4
+
+[![PI](https://img.youtube.com/vi/x9reZuW76l4/0.jpg)](https://youtu.be/x9reZuW76l4)
 
 ## Removing the integral term
 
 The integral term should handle the problem of the car being **biased**. This means that the car does not, on average, go along the designated line. The following video shows that the car really is biased: it tends to be on the right part of the lane:
 
-https://youtu.be/abY9rvMBhaA
+[![PD](https://img.youtube.com/vi/abY9rvMBhaA/0.jpg)](https://youtu.be/abY9rvMBhaA)
 
 ## Removing the proprtional term
 
 The proportional term is designed to make the car steer in the direction of and proportional to the cross track error. Intuitively, removing this term should have a very big effect in that the car does not steer directly proportional to the CTE. Surprisingly, the controller still performed reasonable:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/fYJYfkgTea4/0.jpg)](https://youtu.be/fYJYfkgTea4)
+[![ID](https://img.youtube.com/vi/fYJYfkgTea4/0.jpg)](https://youtu.be/fYJYfkgTea4)
