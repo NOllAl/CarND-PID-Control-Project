@@ -1,6 +1,12 @@
 #ifndef PID_H
 #define PID_H
 
+#include <iostream>
+#include <limits>
+#include "Eigen/Dense"
+
+using Eigen::VectorXd;
+
 class PID {
 public:
   /*
@@ -17,6 +23,10 @@ public:
   double Ki;
   double Kd;
 
+  /*
+  * Cross track error: needed for twiddle and reset after each step
+  */
+  double totalError;
   /*
   * Constructor
   */
@@ -36,11 +46,6 @@ public:
   * Update the PID error variables given cross track error.
   */
   void UpdateError(double cte);
-
-  /*
-  * Calculate the total PID error.
-  */
-  double TotalError();
 };
 
 #endif /* PID_H */
